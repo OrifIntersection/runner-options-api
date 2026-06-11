@@ -2,3 +2,5 @@ node_modules
 pb_data
 pocketbase-testing
 pocketbase_mac
+pocketbase
+pb_migrations
