@@ -1,15 +1,16 @@
 {
-  "name": "runner-options-api",
-  "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
-  "author": "",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-  "pocketbase": "^0.27.0"
-}
+	"name": "runner-options-api",
+	"version": "1.0.0",
+	"description": "",
+	"license": "ISC",
+	"author": "",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"build": "esbuild index.js --bundle --format=esm --minify --outfile=public/build.js",
+		"start": "esbuild index.js --bundle --outfile=public/build.js --format=esm --watch --serve --servedir=public"
+	},
+	"dependencies": {
+		"pocketbase": "^0.27.0"
+	}
 }

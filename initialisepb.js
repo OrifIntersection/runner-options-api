@@ -81,11 +81,29 @@ const adjectives = [
 	"vast",
 ];
 
+const hosts = [
+	{
+		name: "mightypython",
+		port: 1024,
+		repo: "web-static-org-repo-test",
+		certDate: 1780584188753,
+	},
+	{
+		name: "calmorca",
+		port: 1025,
+		repo: "web-express-org-repo-test",
+		certDate: 1780640815144,
+	},
+	{
+		name: "eagermoose",
+		port: 1026,
+		repo: "vite-express-org-repo-test",
+		certDate: 1780648849145,
+	},
+];
+
 await pb
-	.collection("animals")
-	.authWithPassword("ljhaesler@protonmail.com", password);
-await pb
-	.collection("adjectives")
+	.collection("_superusers")
 	.authWithPassword("ljhaesler@protonmail.com", password);
 
 for (const animal of animals) {
@@ -94,4 +112,13 @@ for (const animal of animals) {
 
 for (const adjective of adjectives) {
 	await pb.collection("adjectives").create({ adjective });
+}
+
+for (const host of hosts) {
+	await pb.collection("hosts").create({
+		name: host.name,
+		port: host.port,
+		repo: host.repo,
+		certDate: new Date(host.certDate),
+	});
 }
