@@ -1,6 +1,6 @@
 import PocketBase from "pocketbase";
 
-const pb = new PocketBase("https://db.is-dev.applications.ws");
+const pb = new PocketBase("https://is-dev.applications.ws");
 
 const domain = ".is-dev.applications.ws";
 const gitdomain = "https://github.com/OrifIntersection/";

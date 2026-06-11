@@ -4,3 +4,4 @@ pocketbase-testing
 pocketbase_mac
 pocketbase
 pb_migrations
+initpb.js
