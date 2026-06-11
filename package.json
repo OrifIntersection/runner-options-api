@@ -8,7 +8,7 @@
 	"main": "index.js",
 	"scripts": {
 		"build": "esbuild index.js --bundle --format=esm --minify --outfile=public/build.js",
-		"start": "esbuild index.js --bundle --outfile=public/build.js --format=esm --watch --serve --servedir=public"
+		"start": "esbuild index.js --bundle --outfile=html/build.js --format=esm --watch --serve --servedir=public"
 	},
 	"dependencies": {
 		"pocketbase": "^0.27.0"
